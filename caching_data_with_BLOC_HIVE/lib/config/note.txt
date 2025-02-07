@@ -1,0 +1,7 @@
+lib/config klasörü, 
+genellikle proje yapılandırma ayarlarını, 
+sabitleri ve çevresel değişkenleri düzenlemek için kullanılır. 
+Bu klasör, proje düzenini daha temiz ve yönetilebilir hale getirmek için 
+yaygın olarak kullanılır.
+
+constants-> sabitler 

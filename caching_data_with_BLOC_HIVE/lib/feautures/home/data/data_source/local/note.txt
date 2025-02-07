@@ -1,0 +1,19 @@
+Bu iki dosya, HomeDbProvider ve HomeDataBaseService,
+ Flutter uygulamasında Hive kullanarak yerel veritabanı 
+ işlemlerini yönetmek için oluşturulmuş bir yapı. 
+
+1. Genel Mantık
+Bu yapıda HomeDbProvider, uygulamanın iş mantığını (business logic) yönetir 
+ve HomeDataBaseService ise Hive veritabanı işlemlerini gerçekleştirir. Yani:
+
+HomeDbProvider bir aracı görevi görür.
+HomeDataBaseService doğrudan Hive ile çalışarak veriyi işler.
+Özetle: HomeDbProvider, veriyi yönetmek ve hata kontrolü yapmak için 
+kullanılırken, HomeDataBaseService ise veriyi saklamak ve almak 
+için Hive veritabanını kullanır.
+
+
+✅ HomeDbProvider, uygulamanın iş mantığını yönetir.
+✅ HomeDataBaseService, Hive ile doğrudan iletişim kurarak veriyi saklar ve çeker.
+✅ HomeDbProvider, HomeDataBaseService'i kullanarak veri ekler, çeker ve kontrol eder.
+✅ Bu yapı, uygulamanın veri yönetimini daha düzenli ve modüler hale getirir.

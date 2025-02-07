@@ -1,0 +1,27 @@
+core klasörü, 
+Flutter projelerinde uygulamanın temel yapılarını ve genel kullanılan 
+bileşenleri organize etmek için kullanılır.
+Bu klasör, genellikle durum yönetimi, servisler,
+ yardımcı fonksiyonlar ve temel bileşenleri içerir.
+
+
+Helpers (Yardımcı Fonksiyonlar) - core/helpers/
+Sık kullanılan fonksiyonları barındırır.
+
+resources (Kaynaklar) - core/resources/
+Uygulamanın temel kaynaklarını içerir. 
+Genellikle renkler, yazı tipleri, ikonlar, metinler ve temalar bu klasörde tutulur.
+
+
+repos (Depolar - Veri Katmanı) - core/repos/
+API çağrıları ve yerel veri işlemlerinin yönetildiği katmandır.
+
+dependency_injection (Bağımlılık Yönetimi) - core/dependency_injection/
+Bağımlılık yönetimi ve servislerin merkezi olarak yönetilmesini sağlar.
+Bu klasör, GetIt gibi bağımlılık enjeksiyon kütüphaneleriyle kullanılır.
+
+📌 GetIt Nedir?
+GetIt, Flutter'da bağımlılık yönetimi (Dependency Injection) 
+için kullanılan hafif ve güçlü bir servis lokatörüdür.
+Servisleri ve nesneleri tek bir merkezden yönetmek, 
+bağımsız bileşenler oluşturmak ve projenin yönetilebilirliğini artırmak için kullanılır.

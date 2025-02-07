@@ -1,0 +1,25 @@
+"Caching data with BLOC & HIVE in FLUTTER" 
+a tutorial focused on implementing data caching in a Flutter application using the BLoC pattern and the Hive database, 
+highlighting the significance of offline functionality.
+It outlines the process of fetching data from a server and storing it in Hive for display in the app, 
+while also addressing user scenarios when offline access to cached data is necessary. 
+If no internet connection and cached data are available, users will receive an error message
+
+Three-tier Architecture with Flutter
+
+
+within the data folder there will be two subfolders models for defining object models
+and data_source to contain both remote and local data sources
+
+data_source remote home api provider to facilitate api calls and handle 
+responses seamslessly through it 
+
+in the resources folder we create a data state class acting as an interface 
+for our app. similar to dartz it uses "dataSuccess" for succesfull data retrival
+and "dataFailed" for errors. ensuring structured and type safe error handling
+
+in the repos folder , place all interface classes for implemanting repositories and services
+
+connection helper class to check if the user has an active internet connection while using the app or not 
+
+ 

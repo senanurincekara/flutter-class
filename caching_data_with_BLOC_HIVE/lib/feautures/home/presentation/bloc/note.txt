@@ -1,0 +1,48 @@
+📌 1️⃣ Bloc Dosyası
+Bloc (Business Logic Component), uygulamanın iş mantığını yönetir. 
+UI'den gelen event (olayları) işler ve uygun state (durumları) döndürür.
+
+Amaç: UI ile veri katmanını ayırmak.
+Görev: Olayları (event) dinler, işler ve uygun durumu (state) döndürür.
+
+
+📌 2️⃣ Event Dosyası
+Event, UI tarafından tetiklenen olaylardır. 
+Kullanıcı etkileşimi veya zamanlama (örneğin butona tıklama veya zamanlayıcı) 
+sonucunda bir event oluşur.
+
+Amaç: UI’nin tetiklediği eylemleri tanımlamak.
+Görev: Bloc'a gönderilen olayları tanımlar.
+
+
+📌 3️⃣ State Dosyası
+State, Bloc tarafından döndürülen veri ve durumları temsil eder.
+UI, bloc’tan gelen state’e göre kendini günceller.
+
+Amaç: UI’ye hangi veri ve durumun gösterileceğini belirlemek.
+Görev: Bloc’un döndürdüğü durumu temsil eder.
+
+
+📌 4️⃣ Status Dosyası (Opsiyonel)
+Status dosyası bazen state ile karıştırılabilir.
+Ancak status, genellikle state'in altında, 
+sadece belirli bir işleme göre geçici durumu tanımlar. 
+State’ler genellikle uzun vadeli veriyi temsil ederken,
+status daha çok kısa vadeli işlemleri (örneğin veri yükleme durumu) tanımlar.
+
+Bazı projelerde status dosyasına gerek olmayabilir, 
+çünkü çoğu zaman state yeterlidir. Ama bazı uygulamalarda 
+status belirli işlemleri (yükleme, başarı, hata gibi) belirtmek için kullanılabilir.
+
+
+
+
+------------------
+
+Özetle:
+   - Bloc: İş mantığını ve veri akışını yönetir.
+   - Event: Kullanıcı etkileşimleri veya zamanlayıcılar gibi UI tarafından 
+    tetiklenen olayları tanımlar.
+   - State: Bloc tarafından döndürülen durumu ve veriyi temsil eder.
+   -Status: Opsiyonel olarak, işlem sürecindeki geçici durumları belirtir 
+    (yükleniyor, başarı, hata vb.).
