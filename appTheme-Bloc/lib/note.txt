@@ -1,0 +1,4 @@
+hydrated_bloc -> Durum yönetimini kalıcı hale getirmek için kullanılır. 
+
+HydratedBloc kullanılarak tema durumu kalıcı hale getirildi.
+Cubit ve BlocProvider ile dinamik tema yönetimi sağlandı.
