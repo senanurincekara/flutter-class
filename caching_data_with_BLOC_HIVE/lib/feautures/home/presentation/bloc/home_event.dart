@@ -8,7 +8,6 @@ sealed class HomeEvent extends Equatable {
   List<Object> get props => [];
 }
 
-//for loading products
 class HomeCallProductsEvent extends HomeEvent {
   const HomeCallProductsEvent();
 

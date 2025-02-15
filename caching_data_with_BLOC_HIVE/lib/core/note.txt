@@ -10,7 +10,7 @@ Sık kullanılan fonksiyonları barındırır.
 
 resources (Kaynaklar) - core/resources/
 Uygulamanın temel kaynaklarını içerir. 
-Genellikle renkler, yazı tipleri, ikonlar, metinler ve temalar bu klasörde tutulur.
+Genellikle stateler, renkler, yazı tipleri, ikonlar, metinler ve temalar bu klasörde tutulur.
 
 
 repos (Depolar - Veri Katmanı) - core/repos/

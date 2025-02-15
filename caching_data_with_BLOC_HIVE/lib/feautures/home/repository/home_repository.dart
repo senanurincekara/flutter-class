@@ -30,6 +30,7 @@ class HomeRepository {
         if (response.statusCode == 200 &&
             response.data["success"] == true &&
             (response.data["products"] as List).isNotEmpty) {
+          //
           ProductModel productsModel = ProductModel.fromJson(response.data);
           _dbProvider.insertProducts(object: productsModel);
 

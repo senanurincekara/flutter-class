@@ -19,18 +19,20 @@ Data katmanı veri işlemlerinin yapıldığı katmandır ve ikiye ayrılır:
 
 Local (Lokal Veritabanı - Hive, SQLite vb.)
 Remote (Sunucu - API, Firebase, HTTP vb.)
-1️⃣ Local:
-Lokal veritabanı işlemlerini yönetir.
-HomeDataBaseService, Hive kullanarak cihazda veri saklar.
-getAll(), insertItem(), isDataAvailable() gibi fonksiyonlar içerir.
-2️⃣ Remote:
-Sunucudan veri çekmek veya göndermek için API işlemleri yapılır.
-dio veya http paketleri kullanılarak API'ye istek yapılır.
-Örneğin, HomeRemoteService gibi bir sınıf olabilir.
+    1️⃣ Local:
+    Lokal veritabanı işlemlerini yönetir.
+    HomeDataBaseService, Hive kullanarak cihazda veri saklar.
+    getAll(), insertItem(), isDataAvailable() gibi fonksiyonlar içerir.
+   
+    2️⃣ Remote:
+    Sunucudan veri çekmek veya göndermek için API işlemleri yapılır.
+    dio veya http paketleri kullanılarak API'ye istek yapılır.
+    Örneğin, HomeRemoteService gibi bir sınıf olabilir.
 
 
 📌 Model Katmanı (Veri Modelleri)
-Data katmanı içinde bulunan ProductModel, uygulamanın kullanacağı veri yapısını temsil eder.
+Data katmanı içinde bulunan ProductModel, 
+uygulamanın kullanacağı veri yapısını temsil eder.
 Bu model, hem local (Hive) hem de remote (API) işlemleri için kullanılır.
 
 

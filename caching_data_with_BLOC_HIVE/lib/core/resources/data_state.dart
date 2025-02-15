@@ -14,6 +14,7 @@ class DataFailed<T> extends DataState {
   const DataFailed(String error) : super(null, error);
 }
 
+//data state class acting as a interface 
 
 //Veri Durumu Yönetimi (State Management) için kullanılan DataState sınıfını
 // ve onun türevlerini tanımlar. 

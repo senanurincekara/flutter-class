@@ -1,3 +1,4 @@
+//1
 abstract class InterfaceRepository<T> {
   Future<T?> getAll();
 

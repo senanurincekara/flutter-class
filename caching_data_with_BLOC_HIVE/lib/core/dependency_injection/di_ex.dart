@@ -7,3 +7,4 @@ export 'package:dio/dio.dart';
 export 'package:get_it/get_it.dart';
 export 'package:hive/hive.dart';
 export 'package:hive_flutter/hive_flutter.dart';
+export 'package:cache/feautures/home/presentation/bloc/home_bloc.dart';

@@ -5,7 +5,8 @@ GetIt di = GetIt.instance;
 
 Future<void> setUpDi() async {
   //network services
-  //Dio'yu tek bir nesne olarak kaydediyoruz, böylece her seferinde yeni bir Dio nesnesi oluşturmaya gerek kalmaz.
+  //Dio'yu tek bir nesne olarak kaydediyoruz,
+  //böylece her seferinde yeni bir Dio nesnesi oluşturmaya gerek kalmaz.
   di.registerSingleton<Dio>(Dio());
 
   //helper -> İnternet bağlantısını kontrol etmek için InternetConnectionHelper nesnesini kaydettik.
@@ -32,4 +33,7 @@ Future<void> setUpDi() async {
   // home repository
   di.registerSingleton(
       HomeRepository(di<HomeApiProvider>(), di<HomeDbProvider>()));
+
+  //bloc
+  di.registerSingleton<HomeBloc>(HomeBloc(di<HomeRepository>()));
 }
