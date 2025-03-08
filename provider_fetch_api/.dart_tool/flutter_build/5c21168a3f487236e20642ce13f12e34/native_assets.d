@@ -1,0 +1,1 @@
+ /Users/senanurincekara/StudioProjects/udemy/getx_api/.dart_tool/flutter_build/5c21168a3f487236e20642ce13f12e34/native_assets.yaml: 

@@ -1,0 +1,47 @@
+📌 Domain katmanı 
+- uygulamanın iş mantığını içerir
+- entitis model sınfı
+- repositories işlevlerin imzaları 
+- usecases repository üzerinden verileri alır ve bunları uI katmanına iletmeden önce işleyebilir
+
+
+📌 Data Katmanı 
+- Verilerin api den alınmasını sağlar . Api ile olan tüm etkileşimi bu katman yönetir
+- datasources veri kaynağını yönetir veri ile ilgili işlemleri gerçekleştirir 
+- repositories , data katmanı ve domain katmanı arasında köprü işlevi. veri kaynağından 
+veriyi alıyor domaine iletiyor
+
+📌 Presentation Katmanı 
+- UI ve kullanıcı etkileşimlerini yönetir 
+- viewmodel sınıfı ui ile veri arasında köprü işlevini görür .
+ UI , viewmodelden veri alır ve günceller. Viewmodel ui ile doğrudan veri etkileşimi sağlamaz
+ sadece veri işleme ve state yönetimi yapar
+Yani, UI'nin hangi veriyi görüntülemesi gerektiği ve hangi verilerin kullanıcı tarafından
+ değiştirilebileceği bu katmanda kontrol edilir. 
+ ChangeNotifier, Provider, GetX, Riverpod gibi araçlar UI ve ViewModel arasındaki durumu yönetir.
+
+ViewModel sınıfı, use case'ini kullanarak veriyi alır ve UI'ya iletir. 
+Ayrıca, kullanıcı etkileşimleri (örneğin, bir butona tıklanması) sonucu 
+ViewModel'de güncellenen veriler UI'ye yansıtılır.
+
+
+UI KATMANI(Presentation) ->
+ViewModel ->
+UseCase (DOMAIN) ->
+Repository (DATA) ->
+DataSources (DATA - API / VERİTABANI)
+
+
+-------------------------------------------
+✅ veri tabanı veya api değişir ise  "DATA" Katmanında değişiklik yapılması gerekmekte.
+Domain katmanı hala aynı iş mantığını yürütür. 
+API'nin nasıl çalıştığı ya da veritabanının nasıl yapılandırıldığı, 
+domain katmanını etkilemez. 
+Domain katmanı yalnızca veri alım ve işleme kurallarını içerdiği için 
+bu katmanın güncellenmesi gerekmez.
+
+Presentation katmanı sadece view model'e bağımlıdır. 
+Eğer API veya veri kaynağı değişirse, 
+sadece data katmanındaki veri çekme işlevini güncellersiniz, 
+presentation katmanı ise view model'den gelen veriyi görüntülemeye devam eder. 
+Yani UI'de herhangi bir değişiklik yapmak gerekmez.
